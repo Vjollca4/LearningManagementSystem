@@ -1,8 +1,14 @@
 {
+<<<<<<< HEAD
   "name": "lms-app",
   "license": "0BSD",
   "version": "1.0.0",
   "main": "index.ts",
+=======
+  "name": "learningmanagementsystem",
+  "version": "1.0.0",
+  "main": "index.js",
+>>>>>>> 4e91eef5b4660f43dd34bd078deda8ef5f423e64
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -10,6 +16,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@react-navigation/bottom-tabs": "^7.2.0",
     "@react-navigation/native": "^7.0.14",
     "expo": "~52.0.30",
@@ -26,6 +33,15 @@
     "@babel/core": "^7.25.2",
     "@types/react": "~18.3.12",
     "typescript": "^5.3.3"
+=======
+    "expo": "~52.0.28",
+    "expo-status-bar": "~2.0.1",
+    "react": "18.3.1",
+    "react-native": "0.76.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+>>>>>>> 4e91eef5b4660f43dd34bd078deda8ef5f423e64
   },
   "private": true
 }
