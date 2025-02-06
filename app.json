@@ -1,12 +1,7 @@
 {
   "expo": {
-<<<<<<< HEAD
     "name": "LMS-App",
     "slug": "LMS-App",
-=======
-    "name": "LearningManagementSystem",
-    "slug": "LearningManagementSystem",
->>>>>>> 4e91eef5b4660f43dd34bd078deda8ef5f423e64
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
