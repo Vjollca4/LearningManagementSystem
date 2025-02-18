@@ -1,12 +1,15 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Dimensions } from 'react-native';
 
 interface TimeSlotProps {
   time: string;
 }
 
+const { height } = Dimensions.get('window');
+const slotHeight = height / 10;  // Adjust divisor to suit your requirements
+
 export const TimeSlot = ({ time }: TimeSlotProps) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { height: slotHeight }]}>
       <Text style={styles.text}>{time}</Text>
     </View>
   );
@@ -14,20 +17,13 @@ export const TimeSlot = ({ time }: TimeSlotProps) => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 60,
-
     borderBottomWidth: 1,
-
-    borderColor: "#ddd",
-
-    justifyContent: "center",
-
+    borderColor: '#ddd',
+    justifyContent: 'center',
     paddingLeft: 8,
   },
-
   text: {
-    color: "#666",
-
+    color: '#666',
     fontSize: 12,
   },
 });

@@ -1,22 +1,10 @@
 import { NavigationContainer } from "@react-navigation/native";
-
 import { MainNavigator } from "./src/navigation/MainNavigator";
-
 import { SafeAreaView } from "react-native";
-
-import { useState } from "react";
-
+import { AuthProvider, useAuth } from "./src/contexts/AuthContext";
 import { AuthNavigator } from "./src/navigation/auth/AuthNavigator";
 
-import { AuthProvider, useAuth } from "./src/contexts/AuthContext";
-import { db, storage } from "./src/config/firebase"; // Firebase import
-
-
-
-
 export default function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
   return (
     <AuthProvider>
       <SafeAreaView style={{ flex: 1 }}>
@@ -27,8 +15,10 @@ export default function App() {
     </AuthProvider>
   );
 }
-const AuthWrapper = () => {
-  const { user } = useAuth();
 
+const AuthWrapper = () => {
+  const { user } = useAuth(); // Get user from AuthContext
+
+  // If user is logged in, show MainNavigator, else show AuthNavigator
   return user ? <MainNavigator /> : <AuthNavigator />;
 };
